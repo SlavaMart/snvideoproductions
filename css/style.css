@@ -2247,11 +2247,6 @@ Video section */
     background: #222222;
   }
 
-  /* Скрыть ссылку на services.html в мобильном меню */
-  .slicknav_nav a[href*="services.html"] {
-    display: none !important;
-  }
-
   .slicknav_btn {
     position: absolute;
     right: 10px;
