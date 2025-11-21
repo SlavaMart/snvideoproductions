@@ -296,8 +296,13 @@ ol {
 
 .language-dropdown {
   position: relative;
-  display: none !important; /* Скрыть языковой селектор */
+  display: none !important; /* Скрыть языковой селектор на всех страницах */
   margin-left: 15px;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
 }
 
 .lang-btn {
