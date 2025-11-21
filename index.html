@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="SN Video Production" name="description" />
+    <meta content="Videograph, unica, creative, html" name="keywords" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>SN Video Production</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/elegant-icons.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="css/slicknav.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script>
+      (function () {
+        const current = window.location.pathname;
+        if (!localStorage.getItem("langRedirected")) {
+          const lang = navigator.language || navigator.userLanguage;
+          let target = "index.html"; // По умолчанию — исландский
+
+          if (lang.startsWith("en")) {
+            target = "index-en.html";
+          }
+
+          if (!current.endsWith(target)) {
+            localStorage.setItem("langRedirected", "true");
+            window.location.href = target;
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="./index.html"><img alt="" src="img/logo3.png" /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li class="active"><a href="./index.html">Heim</a></li>
+                  <li><a href="./about.html">Um okkur</a></li>
+                  <li><a href="./portfolio.html">Verkefnin</a></li>
+                  <!-- <li><a href="./photo.html">Photo</a></li> -->
+                  <li><a href="./services.html">Þjónusta</a></li>
+                  <!-- <li><a href="#">Blog</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li> -->
+                  <li><a href="./contact.html">Hafa samband</a></li>
+                </ul>
+              </nav>
+              <div class="header__nav__social">
+                <a class="contact__widget__item__phone" href="tel:+3548317453"
+                  ><i class="fa fa-phone"></i> +354 831 74 53</a
+                >
+                <a
+                  class="contact__widget__item__phone"
+                  href="https://www.instagram.com/videosn_/"
+                  target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a
+                  class="contact__widget__item__phone"
+                  href="https://www.facebook.com/profile.php?id=61561361626344"
+                  target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a
+                  class="contact__widget__item__phone"
+                  href="https://www.youtube.com/@SNVideoProduction"
+                  target="_blank"
+                  ><i class="fa fa-youtube-play"></i
+                ></a>
+                <!-- Выбор языка -->
+                <div class="language-dropdown">
+                  <div class="lang-btn">
+                    <img
+                      alt="IS"
+                      height="14"
+                      src="img/flags/is.png"
+                      width="20"
+                    />
+                    IS <span>▼</span>
+                  </div>
+                  <div class="lang-menu">
+                    <a class="active" href="index.html">
+                      <img
+                        alt="IS"
+                        height="14"
+                        src="img/flags/is.png"
+                        width="20"
+                      />
+                      Íslenskur
+                    </a>
+                    <a href="index-en.html">
+                      <img
+                        alt="EN"
+                        height="14"
+                        src="img/flags/gb.png"
+                        width="20"
+                      />
+                      English
+                    </a>
+                  </div>
+                </div>
+                <!-- Выбор языка -->
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const dropdown =
+                      document.querySelector(".language-dropdown");
+                    const menu = dropdown.querySelector(".lang-menu");
+                    const button = dropdown.querySelector(".lang-btn");
+                    dropdown.addEventListener(
+                      "mouseenter",
+                      () => (menu.style.display = "block")
+                    );
+                    dropdown.addEventListener(
+                      "mouseleave",
+                      () => (menu.style.display = "none")
+                    );
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- Hero Section Begin -->
+    <section class="hero">
+      <div class="video-bg">
+        <video
+          autoplay=""
+          loop=""
+          muted=""
+          src="./video/video-bg.mp4"
+          type="video/mp4"
+        ></video>
+        <!-- затемнение -->
+        <div class="overlay"></div>
+        <!-- контент поверх видео -->
+        <!-- <div class="video-bg__content">
+          <div class="hero__text">
+            <h1 class="text-bg">SN MYNDBÖND FRAMLEIÐSLA</h1>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Services Section Begin -->
+    <section class="services spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="services__title">
+              <div class="section-title">
+                <span>Þjónusta okkar</span>
+                <h2>Hvað gerum við?</h2>
+              </div>
+              <p>
+                Ef þú ræður kvikmyndatökumann úr teyminu okkar færðu fagaðila
+                sem býr til sérsniðið myndband fyrir fyrirtækið þitt. Þegar
+                verkefninu er lokið færðu það afhent í hæsta gæðaflokki.
+              </p>
+              <a class="primary-btn" href="/services.html#services"
+                >Skoða alla þjónustu</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img alt="" src="img/icons/si-1.png" />
+                  </div>
+                  <h4>Undirbúningur</h4>
+                  <p>
+                    Við þróum hugmynd að myndbandinu, skrifum handrit, skoðum
+                    tökustaði, veljum leikara, reiknum kostnað og samþykkjum öll
+                    skilyrði fyrir tökur.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img alt="" src="img/icons/si-2.png" />
+                  </div>
+                  <h4>Eftirvinnsla</h4>
+                  <p>
+                    Við klippum, lituðum, bætum við áhrifum og fullvinnum
+                    myndbandið svo það sé tilbúið til birtingar.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img alt="" src="img/icons/si-3.png" />
+                  </div>
+                  <h4>Framleiðsla</h4>
+                  <p>
+                    Við setjum saman rétt teymi fagfólks eftir eðli og umfangi
+                    verkefnisins og tökum upp samkvæmt samþykktu handriti.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img alt="" src="img/icons/si-4.png" />
+                  </div>
+                  <h4>Skil verkefnis</h4>
+                  <p>
+                    Við afhendum lokaútgáfu myndbandsins og aðstoðum við
+                    birtingu þess á valinni miðlun, auk þess að leysa öll tengd
+                    mál.
+                  </p>
+                </div>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const dropdown =
+                      document.querySelector(".language-dropdown");
+                    const menu = dropdown.querySelector(".lang-menu");
+                    const button = dropdown.querySelector(".lang-btn");
+                    dropdown.addEventListener(
+                      "mouseenter",
+                      () => (menu.style.display = "block")
+                    );
+                    dropdown.addEventListener(
+                      "mouseleave",
+                      () => (menu.style.display = "none")
+                    );
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+    <!-- Work Section Begin -->
+    <section class="work">
+      <div class="work__gallery">
+        <div class="grid-sizer"></div>
+        <div
+          class="work__item wide__item set-bg"
+          data-setbg="img/work/work-8.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=qCDl_gsKQYQ"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>Kynningar</h4>
+            <ul>
+              <li>Kynningar</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="work__item small__item set-bg"
+          data-setbg="img/work/work-13.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=VmwUmsqEiJU"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>
+              Goslok.<br />
+              Vestmannaeyjar
+            </h4>
+            <ul>
+              <li>Viðburðir</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="work__item small__item set-bg"
+          data-setbg="img/work/work-15.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=OMJF8VnGRqs"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>Puffin Run.<br />Vestmannaeyjar</h4>
+            <ul>
+              <li>Viðburðir</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="work__item large__item set-bg"
+          data-setbg="img/work/work-10.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=YjFzd08uKik"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>Brúðkaup SVAVAR &amp; ÞORGERÐUR</h4>
+            <ul>
+              <li>Brúðkaup</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="work__item small__item set-bg"
+          data-setbg="img/work/work-11.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=RoxrbDZC2ys"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>Dass Bar</h4>
+            <ul>
+              <li>Viðburðir</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="work__item small__item set-bg"
+          data-setbg="img/work/work-12.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=jvNeblwMiMg"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>Vöruhúsið</h4>
+            <ul>
+              <li>Viðburðir</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="work__item wide__item set-bg"
+          data-setbg="img/work/work-9.jpg"
+        >
+          <a
+            class="play-btn video-popup"
+            href="https://www.youtube.com/watch?v=CEJfKwtpm6A"
+            ><i class="fa fa-play"></i
+          ></a>
+          <div class="work__item__hover">
+            <h4>Memm - Viltu vera memm</h4>
+            <ul>
+              <li>Tónlistarmyndbönd</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Work Section End -->
+    <!-- Counter Section Begin -->
+    <section class="counter">
+      <div class="container">
+        <div class="counter__content">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item">
+                <div class="counter__item__text">
+                  <img alt="" src="img/icons/ci-1.png" />
+                  <h2 class="counter_num">1230</h2>
+                  <p>Lokið verkefnum</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item second__item">
+                <div class="counter__item__text">
+                  <img alt="" src="img/icons/ci-2.png" />
+                  <h2 class="counter_num">325</h2>
+                  <p>Ánægðir viðskiptavinir</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item third__item">
+                <div class="counter__item__text">
+                  <img alt="" src="img/icons/ci-3.png" />
+                  <h2 class="counter_num">52</h2>
+                  <p>Markaðsverkefni</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item four__item">
+                <div class="counter__item__text">
+                  <img alt="" src="img/icons/ci-4.png" />
+                  <h2 class="counter_num">350</h2>
+                  <p>Myndbandahandrit</p>
+                </div>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const dropdown =
+                      document.querySelector(".language-dropdown");
+                    const menu = dropdown.querySelector(".lang-menu");
+                    const button = dropdown.querySelector(".lang-btn");
+                    dropdown.addEventListener(
+                      "mouseenter",
+                      () => (menu.style.display = "block")
+                    );
+                    dropdown.addEventListener(
+                      "mouseleave",
+                      () => (menu.style.display = "none")
+                    );
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Counter Section End -->
+    <!-- Team Section Begin -->
+    <article id="team"></article>
+    <section class="team spad set-bg" data-setbg="img/team-bg.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>Gaman að kynnast</span>
+              <h2>Teymið okkar</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row team_content">
+          <!-- <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                    <div class="team__item set-bg">
+                    </div>
+                </div> -->
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--second set-bg"
+              data-setbg="img/team/team-6.jpg"
+            >
+              <div class="team__item__text">
+                <h4>NATALI OSONS</h4>
+                <p>Stofnandi & Framleiðandi</p>
+                <!-- <div class="team__item__social">
+                  <a
+                    href="https://www.instagram.com/osonsraw?igsh=MWhtYXVqOXRwM253dg=="
+                    target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                  <a href="https://www.facebook.com/osons" target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </div> -->
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const dropdown =
+                      document.querySelector(".language-dropdown");
+                    const menu = dropdown.querySelector(".lang-menu");
+                    const button = dropdown.querySelector(".lang-btn");
+                    dropdown.addEventListener(
+                      "mouseenter",
+                      () => (menu.style.display = "block")
+                    );
+                    dropdown.addEventListener(
+                      "mouseleave",
+                      () => (menu.style.display = "none")
+                    );
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--third set-bg"
+              data-setbg="img/team/team-5.jpg"
+            >
+              <div class="team__item__text">
+                <h4>SLAVA MART</h4>
+                <p>Stofnandi & Framleiðandi</p>
+                <!-- <div class="team__item__social">
+                  <a
+                    href="https://www.instagram.com/slavamart_ov?igsh=MXJremhoeGdpdXpkbg%3D%3D&amp;utm_source=qr"
+                    target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/slavamartovs"
+                    target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </div> -->
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const dropdown =
+                      document.querySelector(".language-dropdown");
+                    const menu = dropdown.querySelector(".lang-menu");
+                    const button = dropdown.querySelector(".lang-btn");
+                    dropdown.addEventListener(
+                      "mouseenter",
+                      () => (menu.style.display = "block")
+                    );
+                    dropdown.addEventListener(
+                      "mouseleave",
+                      () => (menu.style.display = "none")
+                    );
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                    <div class="team__item team__item--four set-bg">
+                    </div>
+                </div> -->
+          <div class="col-lg-12 p-0">
+            <div class="team__btn">
+              <a class="primary-btn" href="./contact.html#contact"
+                >Hittu okkur</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+    <!-- Latest Blog Section Begin -->
+    <!-- <section class="latest spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <span>Our Blog</span>
+                        <h2>Blog Update</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="latest__slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>What Makes Users Want to Share a Video on Social Media?</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>What Makes Users Want to Share a Video on Social Media?</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>Bumper Ads: How to Tell a Story in 6 Seconds</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>What Makes Users Want to Share a Video on Social Media?</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>What Makes Users Want to Share a Video on Social Media?</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item">
+                            <h4>What Makes Users Want to Share a Video on Social Media?</h4>
+                            <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul>
+                            <p>We recently launched a new website for a Vital client and wanted to share some of the
+                                cool features we were able...</p>
+                            <a href="#">Read more <span class="arrow_right"></span></a>
+                        
+
+
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Latest Blog Section End -->
+    <!-- Call To Action Section Begin -->
+    <!-- <section class="callto spad set-bg" data-setbg="img/callto-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="callto__text">
+                        <h2>Fresh Ideas, Fresh Moments Giving Wings to your Stories.</h2>
+                        <p>INC5000, Best places to work 2019</p>
+                        <a href="#">Start your stories</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Call To Action Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="footer__top__logo">
+                <a href="#"><img alt="" src="img/Logo11.png" /></a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="footer__top__social">
+                <a
+                  class="contact__widget__item__phone"
+                  href="https://www.instagram.com/videosn_/"
+                  target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a
+                  class="contact__widget__item__phone"
+                  href="https://www.facebook.com/profile.php?id=61561361626344"
+                  target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a
+                  class="contact__widget__item__phone"
+                  href="https://www.youtube.com/@SNVideoProduction"
+                  target="_blank"
+                  ><i class="fa fa-youtube-play"></i
+                ></a>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const dropdown =
+                      document.querySelector(".language-dropdown");
+                    const menu = dropdown.querySelector(".lang-menu");
+                    const button = dropdown.querySelector(".lang-btn");
+                    dropdown.addEventListener(
+                      "mouseenter",
+                      () => (menu.style.display = "block")
+                    );
+                    dropdown.addEventListener(
+                      "mouseleave",
+                      () => (menu.style.display = "none")
+                    );
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__option">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="footer__option__item">
+                <h5>Um okkur</h5>
+                <p>
+                  Fyrirtækið SN Video Production var stofnað af Slava Mart og
+                  Natali Osons árið 2018 í Úkraínu sem
+                  kvikmyndaframleiðslufyrirtæki sem sérhæfði sig í fjölbreyttri
+                  gerð myndefnis — allt frá viðtölum til interviews to
+                </p>
+                <a class="read__more" href="/about.html#about"
+                  >Lesa meira <span class="arrow_right"></span
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+              <div class="footer__option__item">
+                <h5>Hverjir erum við</h5>
+                <ul>
+                  <li><a href="./index.html#team">Liðið</a></li>
+                  <li><a href="./contact.html#contact">Hafðu samband</a></li>
+                  <li><a href="./contact.html#contact">Hafðu samband</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+              <div class="footer__option__item">
+                <h5>Verkefnin okkar</h5>
+                <ul>
+                  <li><a href="/services.html#services">Þjónusta</a></li>
+                  <li><a href="/portfolio.html#video">Myndbönd</a></li>
+                  <!-- <li><a href="/blog.html#blog">Blog</a></li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="footer__option__item">
+                <h5>Fréttabréf</h5>
+                <ul>
+                  <li><a href="./contact.html#contact">Sendu okkur línu</a></li>
+                </ul>
+                <form action="">
+                  <input type="text" placeholder="Email" />
+                  <button type="submit"><i class="fa fa-send"></i></button>
+                  <a href="mailto:martovinfo@gmail.com"></a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <p class="footer__copyright__text">
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i aria-hidden="true" class="fa fa-heart-o"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              </p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
