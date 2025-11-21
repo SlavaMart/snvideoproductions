@@ -296,7 +296,7 @@ ol {
 
 .language-dropdown {
   position: relative;
-  display: inline-block;
+  display: none !important; /* Скрыть языковой селектор */
   margin-left: 15px;
 }
 
